@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legal Study Tool</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Legal Study Tool</h1>
+    <p>Import course PDFs (syllabi, textbooks, past exams, outlines) to organize case briefs and outlines, then generate AI-assisted case briefs and course outlines.</p>
+  </header>
+
+  <main>
+    <section id="import-section">
+      <h2>Import PDFs</h2>
+      <p>Select one or more PDF files to add them to your study library.</p>
+      <input type="file" id="pdfInput" accept="application/pdf" multiple />
+      <button id="importButton">Import Selected PDFs</button>
+    </section>
+
+    <section id="library-section">
+      <h2>Your Materials</h2>
+      <p class="hint">Click a PDF below to select it, then choose to generate a case brief or outline.</p>
+      <ul id="pdfList" aria-label="Imported PDF materials list"></ul>
+    </section>
+
+    <section id="workspace-section">
+      <h2>Workspace</h2>
+      <div class="workspace-columns">
+        <div class="workspace-column">
+          <h3>Case Briefs</h3>
+          <button id="generateBriefButton">Generate Case Brief from Selected PDF</button>
+          <div id="briefList" class="card-list"></div>
+        </div>
+        <div class="workspace-column">
+          <h3>Outlines</h3>
+          <button id="generateOutlineButton">Generate Outline from Selected PDF</button>
+          <div id="outlineList" class="card-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Initial prototype – PDF parsing and deeper features to be implemented.</small>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
